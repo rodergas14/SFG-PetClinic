@@ -9,9 +9,8 @@
 		<artifactId>SFG-PetClinic</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>guru.springframework</groupId>
+
 	<artifactId>pet-clinic-data</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>pet-clinic-data</name>
 	<url>http://maven.apache.org</url>
 	<properties>
