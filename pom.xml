@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>guru.springframework</groupId>
 	<artifactId>SFG-PetClinic</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>SFG-PetClinic</name>
 	<description>Petclinic</description>
 	<packaging>pom</packaging>
@@ -29,7 +29,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugin</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>1.0</version>
+				<version>410</version>
 				<configuration>
 					<goals>install</goals>	
 				</configuration>
@@ -37,7 +37,9 @@
 		</plugins>
 	</build>
 	
-
+	<scm>
+		<developerConnection>scm:git:git@github.com:https://github.com/rodergas14/SFG-PetClinic.git</developerConnection>
+  </scm>
 	
 	<modules>
 		<module>pet-clinic-data</module>
