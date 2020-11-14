@@ -29,7 +29,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugin</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>4.0</version>
+				<version>1.0</version>
 				<configuration>
 					<goals>install</goals>	
 				</configuration>
