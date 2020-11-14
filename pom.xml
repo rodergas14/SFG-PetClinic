@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>guru.springframework</groupId>
 	<artifactId>SFG-PetClinic</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>SFG-PetClinic</name>
 	<description>Petclinic</description>
 	<packaging>pom</packaging>
