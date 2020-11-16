@@ -1,11 +1,14 @@
 package guru.springframework.petclinic.services.map;
 
 import java.util.Optional;
+
 import java.util.Set;
+
+import org.springframework.stereotype.Service;
 
 import guru.springframework.petclinic.model.Vet;
 import guru.springframework.petclinic.services.VetService;
-
+@Service
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService{
 
 	@Override

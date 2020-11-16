@@ -3,10 +3,12 @@ package guru.springframework.petclinic.services.map;
 import java.util.Optional;
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import guru.springframework.petclinic.model.Pet;
 import guru.springframework.petclinic.services.PetService;
 
-
+@Service
 public class PetMapService extends AbstractMapService<Pet, Long> implements PetService{
 
 	

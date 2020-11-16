@@ -5,9 +5,12 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Service;
+
 import guru.springframework.petclinic.model.Owner;
 import guru.springframework.petclinic.services.OwnerService;
 
+@Service
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService{
 	
 	@Override
