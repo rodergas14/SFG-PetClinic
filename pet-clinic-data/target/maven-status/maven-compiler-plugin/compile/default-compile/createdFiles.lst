@@ -1,5 +1,14 @@
+guru\springframework\petclinic\services\map\AbstractMapService.class
+guru\springframework\petclinic\services\map\PetMapService.class
+guru\springframework\petclinic\services\CrudService.class
 guru\springframework\petclinic\model\PetType.class
-guru\springframework\petclinic\model\Pet.class
+guru\springframework\petclinic\model\BaseEntity.class
+guru\springframework\petclinic\services\OwnerService.class
 guru\springframework\petclinic\model\Owner.class
+guru\springframework\petclinic\model\Pet.class
+guru\springframework\petclinic\services\PetService.class
+guru\springframework\petclinic\services\map\OwnerMapService.class
+guru\springframework\petclinic\services\map\VetMapService.class
 guru\springframework\petclinic\model\Vet.class
+guru\springframework\petclinic\services\VetService.class
 guru\springframework\petclinic\model\Person.class
