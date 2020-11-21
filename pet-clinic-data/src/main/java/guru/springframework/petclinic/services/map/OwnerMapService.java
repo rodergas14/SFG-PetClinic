@@ -46,34 +46,38 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 	
 	@Override
 	public Owner save(Owner object) {
-		Owner savedOwner = null;
 		if(object != null) {
-			if(object.getPets() != null) {
-				object.getPets().forEach(pet ->{
-					if(pet.getPetType() != null) {
-						if(pet.getPetType().getId() == null) {
-							pet.setPetType(petTypeService.save(pet.getPetType()));
-						}
-					}else {
-						throw new RuntimeException("Pet Type is required");
-					}
-					
-					if(pet.getId() == null) {
-						Pet savedPet = petService.save(pet);
-						pet.setId(savedPet.getId());
-					}
-				});
-			}
-			
-			
+			persistPets(object);
 			return super.save(object);
 		}else {
 			return null;
 		}
-		
-		
-		
 	}
+	
+	
+    private void persistPets(Owner owner) {
+        if (owner.getPets() != null) {
+            owner.getPets().forEach(this::persistPet);
+        }
+    }
+    private void persistPet(Pet pet) {
+        if (pet.getPetType() != null) {
+            createPetTypeIfNeeded(pet);
+        } else {
+            throw new RuntimeException("Pet Type is required");
+        }
+        savePetIfNeeded(pet);
+    }
+    private void createPetTypeIfNeeded(Pet pet) {
+        if (pet.getPetType().getId() == null) {
+            pet.setPetType(petTypeService.save(pet.getPetType()));
+        }
+    }
+    private void savePetIfNeeded(Pet pet) {
+        if (pet.getId() == null) {
+            pet.setId(petService.save(pet).getId());
+        }
+    }
 
 	@Override
 	public List<Owner> findByLastName(String lastName) {
